@@ -23,7 +23,7 @@ jobs:
         run: flutter test
 
       - name: Build
-        run: flutter build web --base-href=${{github.event.repository.name}}
+        run: flutter build web --base-href='/${{github.event.repository.name}}/'
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
