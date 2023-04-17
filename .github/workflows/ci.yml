@@ -25,9 +25,6 @@ jobs:
       - name: Build
         run: flutter build web --base-href=${{github.event.repository.name}}
 
-#      - name: Fix service worker for GitHub Pages
-#        run: sed -i '/ \"\/\",$/d' build/web/flutter_service_worker.js
-
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
